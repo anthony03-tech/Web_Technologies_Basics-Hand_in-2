@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css-SecondPage.css" />
+    <title>Account</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="todo.html">Tasks</a>
+        <a href="account.html" class="active">Account</a>
+      </nav>
+
+      <h1>Profile</h1>
+
+      <!-- Profile -->
+      <p class="section-label">Profile</p>
+      <div class="card">
+        <div class="profile">
+          <div class="avatar">A</div>
+          <div class="profile-info">
+            <p class="profile-name">Alex Martin</p>
+            <p class="profile-email">alex.martin@email.com</p>
+            <p class="profile-since">Member since January 2024</p>
+          </div>
+          <a href="#" class="edit-btn">Edit</a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <p class="section-label">Activity</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-number">24</p>
+          <p class="stat-label">Total</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number green">15</p>
+          <p class="stat-label">Completed</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number red">9</p>
+          <p class="stat-label">Remaining</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 10px">
+        <div class="progress-header">
+          <span>Completion rate</span>
+          <span class="progress-pct">62%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="progress-sub">15 of 24 tasks done this month</p>
+      </div>
+
+      <!-- Settings -->
+      <p class="section-label">Preferences</p>
+      <div class="settings-list">
+        <div class="setting-row">
+          <span class="setting-icon">🔔</span>
+          <span class="setting-name">Daily reminders</span>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="toggle-track"></span>
+            <span class="toggle-thumb"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-icon">🌙</span>
+          <span class="setting-name">Dark mode</span>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="toggle-track"></span>
+            <span class="toggle-thumb"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-icon">📌</span>
+          <span class="setting-name">Pin urgent tasks</span>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="toggle-track"></span>
+            <span class="toggle-thumb"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-icon">✅</span>
+          <span class="setting-name">Auto-hide completed</span>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="toggle-track"></span>
+            <span class="toggle-thumb"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-icon">🗑️</span>
+          <span class="setting-name danger">Delete account</span>
+          <a
+            href="#"
+            class="edit-btn"
+            style="color: #e74c3c; border-color: #e74c3c"
+            >Delete</a
+          >
+        </div>
+      </div>
+
+      <p class="footer-note">— your data is yours —</p>
+    </div>
+  </body>
+</html>
