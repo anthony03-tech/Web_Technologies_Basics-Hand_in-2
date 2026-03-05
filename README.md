@@ -1,0 +1,1 @@
+The project containing a web backend with at least 3 different routes. At least one route is dynamic, allowing users to access many different pages with different URLs handled by a single route function in the backend. 
