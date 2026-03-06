@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css-SecondPage.css" />
+    <link rel="stylesheet" href="/templates/css-SecondPage.css" />
     <title>Account</title>
   </head>
 
   <body>
     <div class="container">
       <nav>
-        <a href="./FirstPage_To-do-list.html">Tasks</a>
-        <a href="./SecondPage_account.html" class="active">Account</a>
-        <a href="./ThirdPage_Settings.html">Settings</a>
+        <a href="/">Tasks</a>
+        <a href="/account" class="active">Account</a>
+        <a href="/settings">Settings</a>
       </nav>
+
+      <div class="users">
+        <button id="user-1" onclick="loadUser(1)">User Profil 1</button>
+        <button id="user-2" onclick="loadUser(2)">User Profil 2</button>
+        <button id="user-3" onclick="loadUser(3)">User Profil 3</button>
+      </div>
 
       <h1>Profile</h1>
 
@@ -21,11 +27,15 @@
       <p class="section-label">Profile</p>
       <div class="card">
         <div class="profile">
-          <div class="avatar">A</div>
+          <div class="avatar" id="avatar">A</div>
           <div class="profile-info">
-            <p class="profile-name">Alex Martin</p>
-            <p class="profile-email">alex.martin@email.com</p>
-            <p class="profile-since">Member since January 2024</p>
+            <p class="profile-name" id="profile-name">Alex Martin</p>
+            <p class="profile-email" id="profile-email">
+              alex.martin@email.com
+            </p>
+            <p class="profile-since" id="profile-since">
+              Member since January 2024
+            </p>
           </div>
           <a href="#" class="edit-btn">Edit</a>
         </div>
@@ -116,5 +126,20 @@
 
       <p class="footer-note">— your data is yours —</p>
     </div>
+    <script>
+      async function loadUser(id) {
+        try {
+          const res = await fetch(`/account/${id}`);
+          const data = await res.json();
+
+          document.getElementById("profile-name").textContent = data.name;
+          document.getElementById("profile-email").textContent = data.email;
+          document.getElementById("avatar").textContent = data.avatar;
+          document.getElementById("profile-since").textContent = data.member;
+        } catch (err) {
+          alert("Failed to load user: " + err.message);
+        }
+      }
+    </script>
   </body>
 </html>
