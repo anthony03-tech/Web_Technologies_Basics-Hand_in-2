@@ -24,16 +24,19 @@ nav {
   margin-bottom: 36px;
 }
 
-nav a {
+nav a,
+button {
   font-size: 13px;
   text-decoration: none;
   padding: 6px 16px;
   border-radius: 20px;
   border: 1px solid #ddd;
   color: #666;
+  cursor: pointer;
 }
 
-nav a.active {
+nav a.active,
+button.active {
   background: #222;
   color: #fff;
   border-color: #222;
