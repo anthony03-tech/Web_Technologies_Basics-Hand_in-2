@@ -18,8 +18,10 @@
         <a href="/settings">Settings</a>
       </nav>
 
-      <div class="users">
-        <button id="user-1" onclick="loadUser(1)">User Profil 1</button>
+      <div>
+        <button id="user-1" class="active" onclick="loadUser(1)">
+          User Profil 1
+        </button>
         <button id="user-2" onclick="loadUser(2)">User Profil 2</button>
         <button id="user-3" onclick="loadUser(3)">User Profil 3</button>
       </div>
@@ -139,6 +141,11 @@
           document.getElementById("profile-email").textContent = data.email;
           document.getElementById("avatar").textContent = data.avatar;
           document.getElementById("profile-since").textContent = data.member;
+
+          document
+            .querySelectorAll("button")
+            .forEach((btn) => btn.classList.remove("active"));
+          document.getElementById(`user-${id}`).classList.add("active");
         } catch (err) {
           alert("Failed to load user: " + err.message);
         }
